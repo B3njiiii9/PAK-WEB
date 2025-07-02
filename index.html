@@ -153,7 +153,7 @@
       return;
     }
 
-    fetch('http://localhost:3000/stk-push', {
+    fetch('https://pak-web-production-ce54.up.railway.app/stk-push', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ phone, amount })
