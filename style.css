@@ -1,0 +1,876 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* === GENERAL RESET === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: black;
+  height: auto;
+}
+
+/* === HEADER === */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  white-space: nowrap;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: x-large;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: yellow;
+}
+
+/* === HERO SECTION === */
+.hero {
+  background-image: url('https://th.bing.com/th/id/R.5e78031da860c3f405c10f32092cbbf7?rik=FraSaVkvL7B3NA&riu=http%3a%2f%2fafricanlanders.com%2fwp-content%2fuploads%2f2021%2f09%2f1630852419779-1.jpg&ehk=gMlWhO%2ff7l51dHH7JT%2fL41aT0hMaCu3TbMyqIS7nLNw%3d&risl=&pid=ImgRaw&r=0');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  animation: switchHeroBg 12s ease-in-out infinite;
+  padding: 0 1rem;
+}
+
+.hero-text {
+  color: white;
+  position: relative;
+  z-index: 2;
+  font-size: 1.2rem;
+  text-align: center;
+  white-space: normal;
+  padding: 1rem;
+  animation: enterCenterExit 8s ease-in-out infinite;
+  opacity: 0;
+}
+
+/* === SECTION WRAPPER === */
+.section {
+  padding: 6rem 2rem 4rem;
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  text-align: center;
+  background: white;
+}
+
+
+/* === RESPONSIVE STYLES === */
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem;
+    flex-wrap: nowrap;
+  }
+
+  header h1 {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  nav ul {
+    gap: 0.1rem;
+  }
+
+  nav a {
+    font-size: 0.4rem;
+    padding: 0.3rem 0.6rem;
+    white-space: nowrap;
+  }
+
+  .hero {
+    background-size: auto;
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
+  }
+
+  .section {
+    padding: 4rem 1rem 2rem;
+    margin-top: 0;
+  }
+}
+
+/* === CONTACT SECTION === */
+.contact-section {
+  position: relative;
+  background-image: url('https://watchandlearn.scholastic.com/content/dam/classroom-magazines/watchandlearn/videos/animals-and-plants/plants/what-are-plants-/What-Are-Plants.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 6rem 2rem;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.contact-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-section h2,
+.contact-section p {
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 1rem 0;
+  animation: slideIn 1s ease-out 0.5s forwards;
+}
+
+.contact-section h2 {
+  margin-top: 3rem;
+  font-size: 2.5rem;
+  width: 100%;
+  animation: slideIn 1s ease-out forwards;
+}
+
+.contact-section a {
+  color: #ffd700;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.contact-section a:hover {
+  color: #ffffff;
+}
+
+/* === CONTACT LAYOUT === */
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact-info,
+.contact-map {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* === RESPONSIVE STACKED LAYOUT === */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .contact-info,
+  .contact-map {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .contact-map iframe {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 0.3rem;
+  background-color: #2e7d32;
+  color: white;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: yellow;
+}
+
+/* === PRODUCTS === */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1300px;
+  margin: 2rem auto;
+  justify-items: center;
+}
+
+.product-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  width: 90%;
+  max-width: 220px;
+  height: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.product-card-link:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+.product-card h3,
+.product-card .price,
+.product-card .rating {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+  color: #2e7d32;
+}
+
+.product-card .price {
+  color: #444;
+  font-weight: bold;
+}
+
+.product-card .rating {
+  color: #ffb400;
+}
+
+.buy-btn {
+  margin-top: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buy-btn:hover {
+  background-color: yellowgreen;
+  transform: scale(1.05);
+}
+
+.card-notice {
+  background-color: #e8f5e9;
+  color: #1b5e20;
+  border-left: 6px solid #2e7d32;
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.card-notice:hover {
+  transform: scale(1.07);
+}
+
+.card-notice .delivery-note {
+  color: #c62828;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+/* === Brand Backgrounds === */
+.coopers-card {
+  background-image: url('https://www.ckl.africa/wp-content/uploads/2020/11/CKL-Africa-Ltd-Logof1.jpg');
+}
+.osho-card {
+  background-image: url('https://logodix.com/logo/1829589.png');
+}
+.kenyaseed-card {
+  background-image: url('https://th.bing.com/th/id/OIP.3TEz7K39bD1fEYj3QJK8swAAAA?rs=1&pid=ImgDetMain');
+}
+.yara-card {
+  background-image: url('https://th.bing.com/th/id/R.e461e7f9e86dff14ba8e32967979cb27?rik=hFam1GYUNIJs1g&pid=ImgRaw&r=0');
+}
+.irrimasters-card {
+  background-image: url('https://th.bing.com/th/id/OIP.RmwCP9gPuRmao6FrCh4dUQAAAA?rs=1&pid=ImgDetMain');
+}
+.syngenta-card {
+  background-image: url('https://th.bing.com/th/id/R.d89a11a1a052c10dc21ab19caa7e6e61?rik=WCnxGes%2bfHK6wA&riu=http%3a%2f%2fwww.logotypes101.com%2flogos%2f475%2f6DCB134089F918C1F6674018C9ED6547%2fSyngenta.png&ehk=sAMtz82GW0iwwFemls%2fQsIBZS5itw1SE%2bHS0QYRkDMo%3d&risl=&pid=ImgRaw&r=0');
+}
+.unga-card {
+  background-image: url('https://images.seeklogo.com/logo-png/61/2/unga-farm-care-east-africa-ltd-logo-png_seeklogo-612065.png');
+}
+.exporttrading-card {
+  background-image: url('https://w7.pngwing.com/pngs/375/725/png-transparent-etg-gondomarese-hd-logo.png');
+}
+.continental-card {
+  background-image: url('https://continentalseeds.com/images/logo/continentalseedslogo.png');
+}
+.kenyahighlands-card {
+  background-image: url('https://royalseed.biz/ws/media-library/f4f671bb7e4e46489f953422d8aae380/combinesd-khs--royal-seed-logo0.5x0.5x.png');
+}
+.brand11-card {
+  background-image: url('https://th.bing.com/th/id/OIP.wUQt1ZJnU1BkT66rWnU_ggHaCg?rs=1&pid=ImgDetMain');
+}
+.brand12-card {
+  background-image: url('https://th.bing.com/th/id/OIP.CmQvmoN8FRPsZ4n-HBR5OQHaD4?rs=1&pid=ImgDetMain');
+}
+
+/* === BRAND CARDS === */
+.brand-card {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.brand-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* === ABOUT SECTION === */
+.about-wrapper {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* stacked layout on all screen sizes */
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.about-text {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.about-wrapper h2 {
+  font-size: 2rem;
+  color: green;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.about-text p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+}
+
+.about-side {
+  flex: 1 1 100%;
+  max-width: 600px;
+  width: 100%;
+  padding: 1rem;
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.about-side h3 {
+  color: #2e7d32;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* === HAMBURGER BUTTON === */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, color 0.3s ease;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.hamburger:hover {
+  color: #ffd700;
+  box-shadow: 0 0 12px #ffd700, 0 0 20px #ffd700;
+  text-shadow: 0 0 12px #ffd700;
+}
+
+/* === PAYMENT CARD SECTION === */
+.payment-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 1px solid #e0e0e0;
+}
+
+.payment-card h2 {
+  font-size: 1.6rem;
+  color: #2e7d32;
+  margin-bottom: 0.8rem;
+}
+
+.payment-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.payment-card input[type="text"],
+.payment-card input[type="number"] {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+/* === M-PESA STYLED BUTTON === */
+.mpesa-btn {
+  background-color: #34b233;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mpesa-btn:hover {
+  background-color: #1d8f2e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* === STATUS MESSAGE === */
+.payment-status {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1b5e20;
+}
+
+
+/* === MOBILE NAVIGATION === */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2000;
+  }
+
+  #main-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    z-index: 1001;
+    text-align: left;
+  }
+
+  #main-nav a:hover {
+    background-color: transparent;
+    color: yellow;
+  }
+}
+
+/* === ANIMATIONS === */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveBgY {
+  0% {
+    background-position: center 0%;
+  }
+  50% {
+    background-position: center 100%;
+  }
+  100% {
+    background-position: center 0%;
+  }
+}
+
+@keyframes enterCenterExit {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes switchHeroBg {
+  0%, 45% {
+    background-image: url('https://th.bing.com/th/id/R.5e78031da860c3f405c10f32092cbbf7?rik=FraSaVkvL7B3NA&riu=http%3a%2f%2fafricanlanders.com%2fwp-content%2fuploads%2f2021%2f09%2f1630852419779-1.jpg&ehk=gMlWhO%2ff7l51dHH7JT%2fL41aT0hMaCu3TbMyqIS7nLNw%3d&risl=&pid=ImgRaw&r=0');
+  }
+  55%, 100% {
+    background-image: url('https://wallpapercave.com/wp/wp3471778.jpg');
+  }
+}
+
+/* === MOBILE RESPONSIVE OPTIMIZATION === */
+@media (max-width: 768px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0.6rem 1rem;
+    justify-content: space-between;
+  }
+
+  .logo-container {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
+  }
+
+  .logo-image {
+    height: 40px;
+  }
+
+  /* Navigation */
+  #main-nav {
+    position: absolute;
+    top: 69px;
+    left: 0;
+    width: 60%; /* increased width for better mobile visibility */
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    display: none;
+    z-index: 1001;
+    border-radius: 0 0 10px 10px;
+  }
+
+  #main-nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #main-nav.show-nav {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+
+  /* Hero */
+  .hero {
+    height: 100vh;
+    padding: 2rem 1rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-text {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  /* Sections */
+  .section {
+    padding: 4rem 1rem 2rem;
+  }
+
+  .about-wrapper,
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .about-text,
+  .about-side,
+  .contact-info,
+  .contact-map {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .contact-map iframe {
+    width: 90%;
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Product Grid */
+  .product-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 2rem 1rem;
+  }
+
+  .product-card,
+  .brand-card {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 220px;
+  }
+
+  /* Main card grid & columns */
+  .main-card-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .column {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* === Back to Home Button === */
+.back-home-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: green;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.back-home-btn:hover {
+  background-color: orange;
+  color: white;
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+/* === Section Backgrounds === */
+#home,
+.about-section,
+.contact-section,
+.services-section {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+/* Optional light background */
+.about-section {
+  background-color: #f0f0f0;
+}
+
+/* Main card grid layout */
+.main-card-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: nowrap;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Mobile card resizing */
+@media (max-width: 768px) {
+  .brand-card {
+    width: 140px;
+    height: 120px;
+  }
+}

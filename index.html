@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Paksons Enterprises</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="https://th.bing.com/th/id/OIP.RmwCP9gPuRmao6FrCh4dUQAAAA?rs=1&pid=ImgDetMain" alt="Paksons Enterprises Logo" class="logo-image">
+  </div>
+  <button class="hamburger" id="hamburger">&#9776;</button>
+  <nav id="main-nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <div class="hero-text">
+    <h2>Welcome to Paksons Enterprises</h2>
+    <p>Your trusted partner in agrovet supplies and services.</p>
+  </div>
+</section>
+
+<section id="services" class="section services-section">
+  <div class="section-box">
+    <h2>Our Services and Products</h2>
+    <p>We provide a wide range of agrovet products and services to meet farmers' needs.</p>
+    <p class="card-notice">
+      <strong>📦 Tap or click on any product card below to explore available items and place your order!</strong><br>
+      🚚 <span class="delivery-note">Deliveries are charged based on distance and are free within Kericho Town.</span>
+    </p>
+
+  <div class="main-card-grid">
+  <div class="column">
+    <a href="coopers.html" class="product-card-link"><div class="brand-card coopers-card"></div></a>
+    <a href="osho.html" class="product-card-link"><div class="brand-card osho-card"></div></a>
+    <a href="kenyaseed.html" class="product-card-link"><div class="brand-card kenyaseed-card"></div></a>
+  </div>
+  <div class="column">
+    <a href="yara.html" class="product-card-link"><div class="brand-card yara-card"></div></a>
+    <a href="irrimasters.html" class="product-card-link"><div class="brand-card irrimasters-card"></div></a>
+    <a href="syngenta.html" class="product-card-link"><div class="brand-card syngenta-card"></div></a>
+  </div>
+  <div class="column">
+    <a href="unga.html" class="product-card-link"><div class="brand-card unga-card"></div></a>
+    <a href="exporttrading.html" class="product-card-link"><div class="brand-card exporttrading-card"></div></a>
+    <a href="continental.html" class="product-card-link"><div class="brand-card continental-card"></div></a>
+  </div>
+  <div class="column">
+    <a href="kenyahighlands.html" class="product-card-link"><div class="brand-card kenyahighlands-card"></div></a>
+    <a href="brand11.html" class="product-card-link"><div class="brand-card brand11-card"></div></a>
+    <a href="brand12.html" class="product-card-link"><div class="brand-card brand12-card"></div></a>
+  </div>
+</div>
+</section>
+
+<section id="payment" class="section">
+  <div class="payment-card">
+    <h2>Make a Payment</h2>
+    <p>Pay instantly via M-Pesa (Lipa na M-Pesa STK Push).</p>
+
+    <input type="text" id="mpesa-phone" placeholder="Enter phone (e.g. 254712345678)">
+    <input type="number" id="mpesa-amount" placeholder="Enter amount (e.g. 100)">
+
+    <button class="mpesa-btn" onclick="makePayment()">Pay Now</button>
+
+    <p id="payment-status" class="payment-status"></p>
+  </div>
+</section>
+
+
+
+<section id="about" class="section about-section">
+  <div class="about-wrapper">
+    <div class="about-side about-text">
+      <h2>About Us</h2>
+      <p>Paksons Enterprises is a trusted agrovet supplier and service provider based in Kenya, dedicated to empowering farmers with high-quality agricultural inputs. With over a decade of experience, we offer a wide range of products, including veterinary drugs, crop protection chemicals, seeds, fertilizers, and irrigation systems.</p>
+      <p>Our mission is to enhance productivity and improve livelihoods by providing reliable solutions and expert guidance. Our knowledgeable team works closely with customers to identify the best products and practices, ensuring they achieve optimal results in their agricultural endeavors.</p>
+      <p>Committed to sustainability, Paksons Enterprises promotes eco-friendly practices that protect the environment while boosting agricultural efficiency. As we continue to innovate and adapt to industry trends, we remain focused on being a valuable partner in the growth and success of the agricultural community in Kenya.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact-section">
+  <div class="contact-content">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:info@paksons.co.ke">info@paksons.co.ke</a></p>
+      <p>Phone: <a href="tel:+254719155202">+254 719 155 202</a></p>
+      <p>Location: Kericho, Kenya</p>
+    </div>
+    <div class="contact-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.88710130812!2d35.288372!3d-0.367808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182ba1147e4e88f3%3A0x93a52c0c39f4c9d1!2sKericho!5e0!3m2!1sen!2ske!4v1717577742227"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Paksons Enterprises Ltd. All rights reserved.</p>
+  <div class="social-icons">
+    <a href="https://wa.me/254722671754" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/paksonsenterprises" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/share/1Am58ZH8z2/" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com/paksonsenterprises" target="_blank"><i class="fab fa-twitter"></i></a>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('main-nav');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('show-nav');
+  });
+</script>
+
+<script>
+  function makePayment() {
+    const phone = document.getElementById('mpesa-phone').value.trim();
+    const amount = document.getElementById('mpesa-amount').value.trim();
+    const status = document.getElementById('payment-status');
+
+    status.innerText = '';
+    status.style.color = '#1b5e20';
+
+    if (!phone.startsWith('2547') || phone.length !== 12) {
+      status.innerText = "❌ Enter a valid phone number (e.g. 254712345678).";
+      status.style.color = '#c62828';
+      return;
+    }
+
+    if (!amount || isNaN(amount) || Number(amount) <= 0) {
+      status.innerText = "❌ Enter a valid amount.";
+      status.style.color = '#c62828';
+      return;
+    }
+
+    fetch('http://localhost:3000/stk-push', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ phone, amount })
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      status.innerText = "✅ STK Push sent! Please check your phone.";
+      status.style.color = '#1b5e20';
+    })
+    .catch(err => {
+      console.error(err);
+      status.innerText = "❌ Error sending payment. Try again.";
+      status.style.color = '#c62828';
+    });
+  }
+</script>
+</body>
+</html>
+
+</body>
+</html>
